@@ -505,16 +505,23 @@
         'galeria_seguridad/seguridad-publica-seguridad-ciudadana.jpg'
       ],
       enfermeria: [
-        'galeria_enfermeria/images1.jpg',
-        'galeria_enfermeria/images2.jpg'
+        'galeria_enfermeria/image.jpeg',
+        'galeria_enfermeria/image1.jpeg',
+        'galeria_enfermeria/image2.jpeg',
+        'galeria_enfermeria/image3.jpeg',
+        'galeria_enfermeria/image4.jpeg',
+        'galeria_enfermeria/image5.jpeg',
+        'galeria_enfermeria/image6.jpeg',
+        'galeria_enfermeria/image7.jpeg',
+        'galeria_enfermeria/image8.jpeg',
+        'galeria_enfermeria/image9.jpeg',
+        'galeria_enfermeria/image10.jpeg'
       ]
     };
 
-    // Inicializar localStorage si no existe
+    // Inicializar localStorage (forzar actualización para sincronizar con config)
     Object.keys(defaultWorkshopImages).forEach(workshop => {
-      if (!localStorage.getItem(`images_${workshop}`)) {
-        localStorage.setItem(`images_${workshop}`, JSON.stringify(defaultWorkshopImages[workshop]));
-      }
+      localStorage.setItem(`images_${workshop}`, JSON.stringify(defaultWorkshopImages[workshop]));
     });
 
     // Función para obtener imágenes de un taller
