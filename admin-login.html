@@ -4,9 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Acceso Administrativo - Casa Abierta PCB</title>
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
   <link href="styles.css" rel="stylesheet">
+
   <style>
     .login-container {
       min-height: 100vh;
@@ -14,7 +16,9 @@
       align-items: center;
       justify-content: center;
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 1rem;
     }
+
     .login-card {
       background: white;
       border-radius: 15px;
@@ -23,19 +27,23 @@
       max-width: 400px;
       width: 100%;
     }
+
     .login-header {
       text-align: center;
       margin-bottom: 2rem;
     }
+
     .login-header i {
       font-size: 3rem;
       color: #667eea;
       margin-bottom: 1rem;
     }
+
     .form-control:focus {
       border-color: #667eea;
       box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
     }
+
     .btn-login {
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       border: none;
@@ -45,16 +53,19 @@
       width: 100%;
       transition: transform 0.2s;
     }
+
     .btn-login:hover {
       transform: translateY(-2px);
       box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
     }
+
     .alert {
       border-radius: 10px;
       border: none;
     }
   </style>
 </head>
+
 <body>
 
   <div class="login-container">
@@ -67,25 +78,30 @@
 
       <div id="error-message" class="alert alert-danger d-none" role="alert">
         <i class="fas fa-exclamation-triangle me-2"></i>
-        Usuario o contraseña incorrectos
+        Email o contraseña incorrectos.
+      </div>
+
+      <div id="success-message" class="alert alert-success d-none" role="alert">
+        <i class="fas fa-check-circle me-2"></i>
+        Acceso correcto. Entrando al panel...
       </div>
 
       <form id="login-form">
         <div class="mb-3">
-          <label for="username" class="form-label">
-            <i class="fas fa-user me-2"></i>Usuario
+          <label for="email" class="form-label">
+            <i class="fas fa-envelope me-2"></i>Email
           </label>
-          <input type="text" class="form-control" id="username" required>
+          <input type="email" class="form-control" id="email" autocomplete="email" required>
         </div>
 
         <div class="mb-4">
           <label for="password" class="form-label">
             <i class="fas fa-lock me-2"></i>Contraseña
           </label>
-          <input type="password" class="form-control" id="password" required>
+          <input type="password" class="form-control" id="password" autocomplete="current-password" required>
         </div>
 
-        <button type="submit" class="btn btn-primary btn-login">
+        <button type="submit" class="btn btn-primary btn-login" id="login-btn">
           <i class="fas fa-sign-in-alt me-2"></i>Iniciar Sesión
         </button>
       </form>
@@ -98,49 +114,55 @@
     </div>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
   <script>
-    // Credenciales de acceso
-    // SECURITY WARNING: Credentials hardcoded in client-side code. Easily bypassable. Implement server-side authentication.
-    const VALID_CREDENTIALS = {
-      username: 'admin',
-      password: 'casaabierta2026'
-    };
+    const SUPABASE_URL = "https://svgaslmceyfohixlvgiv.supabase.co";
+    const SUPABASE_ANON_KEY = "REEMPLAZA_AQUI_TU_ANON_PUBLIC_KEY_COMPLETA";
 
-    // Función de autenticación
-    function authenticate(username, password) {
-      return username === VALID_CREDENTIALS.username && password === VALID_CREDENTIALS.password;
-    }
+    const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-    // Manejar envío del formulario
-    document.getElementById('login-form').addEventListener('submit', function(e) {
-      e.preventDefault();
+    document.addEventListener("DOMContentLoaded", async function() {
+      const { data } = await supabaseClient.auth.getSession();
 
-      const username = document.getElementById('username').value.trim();
-      const password = document.getElementById('password').value;
-      const errorMessage = document.getElementById('error-message');
-
-      if (authenticate(username, password)) {
-        // Credenciales correctas - guardar en sessionStorage
-        sessionStorage.setItem('adminAuthenticated', 'true');
-        sessionStorage.setItem('adminLoginTime', Date.now());
-
-        // Redirigir al panel de administración
-        window.location.href = 'admin-panel.html';
-      } else {
-        // Credenciales incorrectas - mostrar error
-        errorMessage.classList.remove('d-none');
-        document.getElementById('password').value = '';
-
-        // Ocultar mensaje de error después de 3 segundos
-        setTimeout(() => {
-          errorMessage.classList.add('d-none');
-        }, 3000);
+      if (data.session) {
+        window.location.href = "admin-panel.html";
+        return;
       }
+
+      document.getElementById("email").focus();
     });
 
-    // Limpiar campos al cargar la página
-    document.addEventListener('DOMContentLoaded', function() {
-      document.getElementById('username').focus();
+    document.getElementById("login-form").addEventListener("submit", async function(e) {
+      e.preventDefault();
+
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value;
+      const errorMessage = document.getElementById("error-message");
+      const successMessage = document.getElementById("success-message");
+      const loginBtn = document.getElementById("login-btn");
+
+      errorMessage.classList.add("d-none");
+      successMessage.classList.add("d-none");
+
+      loginBtn.disabled = true;
+      loginBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Verificando...';
+
+      const { error } = await supabaseClient.auth.signInWithPassword({
+        email: email,
+        password: password
+      });
+
+      if (error) {
+        errorMessage.classList.remove("d-none");
+        document.getElementById("password").value = "";
+        loginBtn.disabled = false;
+        loginBtn.innerHTML = '<i class="fas fa-sign-in-alt me-2"></i>Iniciar Sesión';
+        return;
+      }
+
+      successMessage.classList.remove("d-none");
+      window.location.href = "admin-panel.html";
     });
   </script>
 

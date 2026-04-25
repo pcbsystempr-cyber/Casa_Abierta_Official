@@ -396,7 +396,7 @@
   <!-- Configuración Supabase -->
   <script>
     const SUPABASE_URL = "https://svgaslmceyfohixlvgiv.supabase.co";
-    const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN2Z2FzbG1jZXlmb2hpeGx2Z2l2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzcxMzMzNjYsImV4cCI6MjA5MjcwOTM2Nn0.FRoH_Lf_i1FlZX8zxxagLycLbdjxd5foehhoNCPsePA";
+    const SUPABASE_ANON_KEY = "sb_publishable_Va0Mrn75UmXOBuNh7pgWcA_NysoWD80";
     const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
   </script>
 
@@ -405,7 +405,6 @@
       id: 1,
       address: "Carretera 156 salida hacia Comerío, Barranquitas, P. R.",
       phone: "+1 787-857-2897",
-      email: "de58390@miescuela.pr",
       email: "de58390@miescuela.pr",
       schedule: "Lunes - Viernes: 7:30 AM - 2:30 PM"
     };
@@ -794,22 +793,10 @@
       await loadFechasList();
     }
 
-    function checkAuthentication() {
-      const isAuthenticated = sessionStorage.getItem("adminAuthenticated") === "true";
-      const loginTime = sessionStorage.getItem("adminLoginTime");
+    async function checkAuthentication() {
+      const { data, error } = await supabaseClient.auth.getSession();
 
-      if (!isAuthenticated || !loginTime) {
-        window.location.href = "admin-login.html";
-        return false;
-      }
-
-      const currentTime = Date.now();
-      const sessionDuration = currentTime - parseInt(loginTime, 10);
-      const maxSessionTime = 24 * 60 * 60 * 1000;
-
-      if (sessionDuration > maxSessionTime) {
-        sessionStorage.removeItem("adminAuthenticated");
-        sessionStorage.removeItem("adminLoginTime");
+      if (error || !data.session) {
         window.location.href = "admin-login.html";
         return false;
       }
@@ -817,14 +804,14 @@
       return true;
     }
 
-    function logout() {
-      sessionStorage.removeItem("adminAuthenticated");
-      sessionStorage.removeItem("adminLoginTime");
+    async function logout() {
+      await supabaseClient.auth.signOut();
       window.location.href = "admin-login.html";
     }
 
-    document.addEventListener("DOMContentLoaded", function() {
-      if (!checkAuthentication()) return;
+    document.addEventListener("DOMContentLoaded", async function() {
+      const isAllowed = await checkAuthentication();
+      if (!isAllowed) return;
 
       document.getElementById("contactModal").addEventListener("show.bs.modal", loadContactData);
       document.getElementById("save-contact-btn").addEventListener("click", saveContactData);
@@ -858,7 +845,9 @@
       if (logoutBtn) logoutBtn.addEventListener("click", logout);
     });
 
-    setInterval(checkAuthentication, 5 * 60 * 1000);
+    setInterval(async function() {
+      await checkAuthentication();
+    }, 5 * 60 * 1000);
   </script>
 </body>
 </html>
