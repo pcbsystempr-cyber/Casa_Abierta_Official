@@ -4,10 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Casa Abierta - "¡Acho, la Pablo es otra cosa!"</title>
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
   <link href="styles.css" rel="stylesheet">
 </head>
+
 <body>
 
   <!-- Navbar -->
@@ -16,28 +18,74 @@
       <a class="navbar-brand" href="#">
         <i class="fas fa-home me-2"></i>Casa Abierta - PCB
       </a>
+
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mx-auto">
-          <li class="nav-item"><a class="nav-link" href="#inicio"><i class="fas fa-home me-2"></i>Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="#servicios"><i class="fas fa-cogs me-2"></i>Servicios</a></li>
-          <li class="nav-item"><a class="nav-link" href="#nosotros"><i class="fas fa-users me-2"></i>Nosotros</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contacto"><i class="fas fa-envelope me-2"></i>Contacto</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#inicio">
+              <i class="fas fa-home me-2"></i>Inicio
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#servicios">
+              <i class="fas fa-cogs me-2"></i>Servicios
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#nosotros">
+              <i class="fas fa-users me-2"></i>Nosotros
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#contacto">
+              <i class="fas fa-envelope me-2"></i>Contacto
+            </a>
+          </li>
+
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
               <i class="fas fa-bars me-2"></i>Más
             </a>
+
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#proximas-casas"><i class="fas fa-calendar me-2"></i>Próximas Casas</a></li>
+              <li>
+                <a class="dropdown-item" href="#proximas-casas">
+                  <i class="fas fa-calendar me-2"></i>Próximas Casas
+                </a>
+              </li>
+
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#galeria"><i class="fas fa-images me-2"></i>Galería</a></li>
+
+              <li>
+                <a class="dropdown-item" href="#galeria">
+                  <i class="fas fa-images me-2"></i>Galería
+                </a>
+              </li>
+
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="admin-login.html"><i class="fas fa-cog me-2"></i>Panel de Administración</a></li>
+
+              <li>
+                <a class="dropdown-item" href="admin-login.html">
+                  <i class="fas fa-cog me-2"></i>Panel de Administración
+                </a>
+              </li>
+
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item btn btn-primary" href="https://pcbsystempr-cyber.github.io/pcbsystem/index.html#inicio"><i class="fas fa-arrow-left me-2"></i>Regresar a PCB System</a></li>
+
+              <li>
+                <a class="dropdown-item btn btn-primary" href="https://pcbsystempr-cyber.github.io/pcbsystem/index.html#inicio">
+                  <i class="fas fa-arrow-left me-2"></i>Regresar a PCB System
+                </a>
+              </li>
             </ul>
+
           </li>
         </ul>
       </div>
@@ -47,36 +95,57 @@
   <!-- Hero -->
   <section class="hero" id="inicio">
     <div class="container">
-       <img src="LOGO6.png" alt="Logo CompuTec" class="header-gif">
+      <img src="LOGO6.png" alt="Logo CompuTec" class="header-gif">
       <h1>"Acho, la Pablo es otra cosa..."</h1>
       <h1>¡Casa Abierta PCB!</h1>
-      <p>“Descubre tu futuro hoy" ¡Ven y visitanos!</p>
+      <p>“Descubre tu futuro hoy" ¡Ven y visítanos!</p>
       <a href="#servicios" class="btn">Explorar Servicios</a>
       <a href="#contacto" class="btn">Contáctanos</a>
     </div>
   </section>
 
-  <!-- Services -->
+  <!-- Servicios -->
   <section class="services" id="servicios">
     <div class="container">
       <h2>Talleres Vocacionales</h2>
+
       <div class="workshop-buttons">
-        <a href="computec.html" class="workshop-btn"><i class="fas fa-laptop"></i>Computec</a>
-        <a href="mercadeo.html" class="workshop-btn"><i class="fas fa-shopping-cart"></i>Mercadeo</a>
-        <a href="enfermeria.html" class="workshop-btn"><i class="fas fa-stethoscope"></i>Enfermería</a>
-        <a href="cosmetologia.html" class="workshop-btn"><i class="fas fa-palette"></i>Cosmetología</a>
-        <a href="artes-culinarias.html" class="workshop-btn"><i class="fas fa-utensils"></i>Artes Culinarias</a>
-        <a href="elaboracion-agricolas.html" class="workshop-btn"><span class="emoji-invert">🌾</span> Elaboración de Productos Agrícolas</a>
+        <a href="computec.html" class="workshop-btn">
+          <i class="fas fa-laptop"></i>Computec
+        </a>
+
+        <a href="mercadeo.html" class="workshop-btn">
+          <i class="fas fa-shopping-cart"></i>Mercadeo
+        </a>
+
+        <a href="enfermeria.html" class="workshop-btn">
+          <i class="fas fa-stethoscope"></i>Enfermería
+        </a>
+
+        <a href="cosmetologia.html" class="workshop-btn">
+          <i class="fas fa-palette"></i>Cosmetología
+        </a>
+
+        <a href="artes-culinarias.html" class="workshop-btn">
+          <i class="fas fa-utensils"></i>Artes Culinarias
+        </a>
+
+        <a href="elaboracion-agricolas.html" class="workshop-btn">
+          <span class="emoji-invert">🌾</span> Elaboración de Productos Agrícolas
+        </a>
       </div>
     </div>
   </section>
 
-    <!-- Services -->
+  <!-- Nuevo taller -->
   <section class="services" id="servicios-nuevos">
     <div class="container">
       <h2>¡NUEVO TALLER!</h2>
+
       <div class="workshop-buttons">
-        <a href="seguridad-publica.html" class="workshop-btn"><i class="fas fa-shield-alt"></i> Seguridad Pública</a>
+        <a href="seguridad-publica.html" class="workshop-btn">
+          <i class="fas fa-shield-alt"></i> Seguridad Pública
+        </a>
       </div>
     </div>
   </section>
@@ -86,160 +155,47 @@
     <div class="container">
       <h2>Próximas Casas Abiertas</h2>
       <div class="proximas-grid" id="proximas-grid">
-        <p class="text-center text-muted">No hay fechas programadas. ¡Vuelve pronto!</p>
+        <p class="text-center text-white">Cargando fechas...</p>
       </div>
     </div>
   </section>
-
 
   <!-- About -->
   <section class="about" id="nosotros">
     <div class="container">
       <h2>Sobre Casa Abierta</h2>
-      <p id="about-text">La Casa Abierta de la Escuela Superior Ocupacional Pablo Colón Berdecia es una experiencia única diseñada para mostrar la excelencia académica y las oportunidades que ofrece nuestra institución. Durante este evento, estudiantes, familias y la comunidad podrán conocer de cerca nuestros programas ocupacionales, talleres prácticos y proyectos innovadores que preparan a los jóvenes para el mundo laboral y universitario.</p>
-      <p>Además, se presentarán las instalaciones, recursos tecnológicos y actividades extracurriculares que fomentan el desarrollo integral del estudiante. Es la ocasión perfecta para descubrir cómo nuestra escuela impulsa el talento y la formación profesional en un ambiente dinámico y colaborativo.</p>
-       <p>“Descubre tu futuro hoy: ¡Ven a nuestra Casa Abierta!”</p>
+
+      <p id="about-text">
+        La Casa Abierta de la Escuela Superior Ocupacional Pablo Colón Berdecia es una experiencia única diseñada para mostrar la excelencia académica y las oportunidades que ofrece nuestra institución.
+      </p>
+
+      <p>“Descubre tu futuro hoy: ¡Ven a nuestra Casa Abierta!”</p>
     </div>
   </section>
 
-  <!-- Gallery Slideshow -->
+  <!-- Galería -->
   <section class="gallery-section" id="galeria">
     <div class="container">
       <h2>Nuestra Galería</h2>
-      <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-        <!-- Indicadores -->
-        <div class="carousel-indicators">
-        <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="0" class="active"></button>
-          <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="1"></button>
-          <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="2"></button>
-          <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="3"></button>
-          <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="4"></button>
-          <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="5"></button>
-          <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="6"></button>
-          <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="7"></button>
-          <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="8"></button>
-          <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="9"></button>
-          <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="10"></button>
-          <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="11"></button>
-          <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="12"></button>
-          <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="13"></button>
-            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="14"></button>
-        </div>
 
-        <!-- Slides -->
-        <div class="carousel-inner">
+      <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-indicators" id="carousel-indicators"></div>
+
+        <div class="carousel-inner" id="carousel-inner">
           <div class="carousel-item active">
-            <img src="LOGO6.png" class="d-block w-100 img-centered" alt="Casa Abierta - Imagen 1">
+            <img src="LOGO6.png" class="d-block w-100 img-centered" alt="Casa Abierta">
             <div class="carousel-caption">
               <h5>Bienvenidos a Casa Abierta</h5>
               <p>Descubre nuestras instalaciones</p>
             </div>
           </div>
-          <div class="carousel-item">
-            <img src="foto.jpg" class="d-block w-100" alt="Casa Abierta - Imagen 2">
-            <div class="carousel-caption">
-              <h5>Talleres Vocacionales</h5>
-              <p>Aprende con los mejores</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="galeria/image7.jpeg" class="d-block w-100 img-centered" alt="Casa Abierta - Imagen 3">
-            <div class="carousel-caption">
-              <h5>Estudiantes en Acción</h5>
-              <p>Formando el futuro</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="galeria/image10.jpeg" class="d-block w-100 img-centered" alt="Casa Abierta - Imagen 4">
-            <div class="carousel-caption">
-              <h5>Nuestras Instalaciones</h5>
-              <p>Tecnología de punta</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="galeria/image6.jpeg" class="d-block w-100 img-centered" alt="Casa Abierta - Imagen 5">
-            <div class="carousel-caption">
-              <h5>Comunidad Educativa</h5>
-              <p>Unidos por la educación</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="galeria/image8.jpeg" class="d-block w-100 img-centered" alt="Casa Abierta - Imagen 6">
-            <div class="carousel-caption">
-              <h5>Casa Abierta PCB</h5>
-              <p>Formando profesionales</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="galeria/image9.jpeg" class="d-block w-100 img-centered" alt="Casa Abierta - Imagen 7">
-            <div class="carousel-caption">
-              <h5>Nuestros Estudiantes</h5>
-              <p>El futuro de Puerto Rico</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="galeria/image.jpeg" class="d-block w-100" alt="Casa Abierta - Imagen 8">
-            <div class="carousel-caption">
-              <h5>Aprendizaje Práctico</h5>
-              <p>Manos a la obra</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="galeria/images17.jpeg" class="d-block w-100 img-centered" alt="Casa Abierta - Imagen 9">
-            <div class="carousel-caption">
-              <h5>Excelencia Educativa</h5>
-              <p>Preparándote para el éxito</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="galeria_cosmetologia/images14.jpeg" class="d-block w-100 img-centered" alt="Casa Abierta - Imagen 10">
-            <div class="carousel-caption">
-              <h5>Innovación y Tecnología</h5>
-              <p>A la vanguardia</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="galeria_mercadeo/images1.PNG" class="d-block w-100 img-centered" alt="Casa Abierta - Imagen 11">
-            <div class="carousel-caption">
-              <h5>Trabajo en Equipo</h5>
-              <p>Juntos somos más fuertes</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="galeria/images20.jpeg" class="d-block w-100" alt="Casa Abierta - Imagen 12">
-            <div class="carousel-caption">
-              <h5>Actividades Especiales</h5>
-              <p>Aprendiendo y disfrutando</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="galeria_artes_culinarias/images27.jpg" class="d-block w-100" alt="Casa Abierta - Imagen 13">
-            <div class="carousel-caption">
-              <h5>Nuestra Escuela</h5>
-              <p>Tu segundo hogar</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="galeria_cosmetologia/images30.jpeg" class="d-block w-100" alt="Casa Abierta - Imagen 14">
-            <div class="carousel-caption">
-              <h5>¡Ven a Conocernos!</h5>
-              <p>Te esperamos</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="galeria_agricolas/images90.jpeg" class="d-block w-100" alt="Casa Abierta - Imagen 15">
-            <div class="carousel-caption">
-              <h5>Nuestra Escuela</h5>
-              <p>Tu segundo hogar</p>
-            </div>
-          </div>
         </div>
 
-        <!-- Controles -->
         <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
           <span class="carousel-control-prev-icon"></span>
           <span class="visually-hidden">Anterior</span>
         </button>
+
         <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
           <span class="carousel-control-next-icon"></span>
           <span class="visually-hidden">Siguiente</span>
@@ -248,60 +204,110 @@
     </div>
   </section>
 
-  <!-- Director Section -->
+  <!-- Director -->
   <section class="director-section" id="director">
     <div class="container">
       <div class="row align-items-center justify-content-center">
+
         <div class="col-lg-4 col-md-5 text-center mb-4 mb-md-0">
           <div class="director-photo">
-            <img src="galeria/imagesdirector1.JPG" alt="Director Escolar Israel López Rivera" class="img-fluid">
+            <img src="galeria/imagesdirector1.JPG" alt="Director Escolar" class="img-fluid">
           </div>
         </div>
+
         <div class="col-lg-6 col-md-7">
           <div class="director-info">
             <h3>Mensaje del Director</h3>
             <h2 id="director-name">Israel López Rivera</h2>
             <p class="director-title" id="director-title">Director Escolar</p>
+
             <p class="director-message" id="director-message">
-              "Bienvenidos a la Escuela Superior Vocacional Pablo Colón Berdecia. Nuestra misión es formar
-              jóvenes capacitados con las destrezas técnicas y valores necesarios para triunfar en el mundo
-              laboral y continuar su desarrollo profesional. En nuestra escuela, cada estudiante encuentra
-              un espacio para crecer, aprender y alcanzar sus sueños. ¡Los esperamos con las puertas abiertas!"
+              Bienvenidos a Casa Abierta PCB.
             </p>
+
             <div class="director-signature">
               <i class="fas fa-signature"></i>
-              <span>Israel López Rivera</span>
+              <span id="director-signature">Israel López Rivera</span>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
+  <!-- Contacto -->
   <section class="contact" id="contacto">
     <div class="container">
       <h2>Contáctanos</h2>
+
       <div class="row">
         <div class="col-lg-5 col-md-10">
           <div class="contact-form">
+
             <form id="contact-form">
               <input type="hidden" name="_subject" value="Nuevo mensaje - Casa Abierta PCB">
-              <div class="mb-3"><input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre completo" required></div>
-              <div class="mb-3"><input type="email" name="email" id="email" class="form-control" placeholder="Correo electrónico" required></div>
-              <div class="mb-3"><input type="tel" name="telefono" id="telefono" class="form-control" placeholder="Teléfono"></div>
-              <div class="mb-3"><textarea name="mensaje" id="mensaje" class="form-control" rows="5" placeholder="Mensaje" required></textarea></div>
-              <div class="text-center"><button type="submit" class="btn btn-submit" id="submit-btn">Enviar Mensaje</button></div>
+
+              <div class="mb-3">
+                <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre completo" required>
+              </div>
+
+              <div class="mb-3">
+                <input type="email" name="email" id="email" class="form-control" placeholder="Correo electrónico" required>
+              </div>
+
+              <div class="mb-3">
+                <input type="tel" name="telefono" id="telefono" class="form-control" placeholder="Teléfono">
+              </div>
+
+              <div class="mb-3">
+                <textarea name="mensaje" id="mensaje" class="form-control" rows="5" placeholder="Mensaje" required></textarea>
+              </div>
+
+              <div class="text-center">
+                <button type="submit" class="btn btn-submit" id="submit-btn">Enviar Mensaje</button>
+              </div>
             </form>
+
             <div id="form-status" class="mt-3 text-center"></div>
           </div>
         </div>
+
         <div class="col-lg-5 col-md-10">
           <div class="contact-info">
-            <div class="contact-item"><i class="fas fa-map-marker-alt"></i><p><strong>Dirección:</strong> <span id="contact-address">Carretera 156 salida hacia Comerío, Barranquitas, P. R.</span></p></div>
-            <div class="contact-item"><i class="fas fa-phone"></i><p><strong>Teléfono:</strong> <a href="tel:+17878572897" class="contact-link" id="contact-phone">+1 787-857-2897</a></p></div>
-            <div class="contact-item"><i class="fas fa-envelope"></i><p><strong>Email:</strong> <span id="contact-email">de58390@miescuela.pr</span></p></div>
-            <div class="contact-item"><i class="fas fa-clock"></i><p><strong>Horario:</strong> <span id="contact-hours">Lunes - Viernes: 7:30 AM - 2:30 PM</span></p></div>
+
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <p>
+                <strong>Dirección:</strong>
+                <span id="contact-address">Cargando...</span>
+              </p>
+            </div>
+
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <p>
+                <strong>Teléfono:</strong>
+                <a href="#" class="contact-link" id="contact-phone">Cargando...</a>
+              </p>
+            </div>
+
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <p>
+                <strong>Email:</strong>
+                <span id="contact-email">Cargando...</span>
+              </p>
+            </div>
+
+            <div class="contact-item">
+              <i class="fas fa-clock"></i>
+              <p>
+                <strong>Horario:</strong>
+                <span id="contact-hours">Cargando...</span>
+              </p>
+            </div>
+
           </div>
         </div>
       </div>
@@ -312,143 +318,201 @@
   <footer>
     <h3>Casa Abierta</h3>
     <p>Un espacio donde la educación y la comunidad se unen para crear oportunidades ilimitadas.</p>
+
     <div class="social-links">
-      <a href="https://www.facebook.com/p/Escuela-Superior-Vocacional-Pablo-Col%C3%B3n-Berdecia-100057389681928/?locale=es_LA" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.facebook.com/p/Escuela-Superior-Vocacional-Pablo-Col%C3%B3n-Berdecia-100057389681928/?locale=es_LA" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+      </a>
     </div>
+
     <div class="footer-bottom">
       <p>&copy; 2026 Computec® Todos los derechos reservados.</p>
     </div>
   </footer>
 
+  <!-- LIBRERÍAS -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-  <!-- EmailJS SDK -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <!-- CONFIGURACIÓN SUPABASE -->
+  <script>
+    const SUPABASE_URL = "https://svgaslmceyfohixlvgiv.supabase.co";
+    const SUPABASE_ANON_KEY = "sb_publishable_Va0Mrn75UmXOBuNh7pgWcA_NysoWD80";
 
-  <script type="text/javascript">
-    // Cargar fechas de Próximas Casas Abiertas
-    function loadProximasCasas() {
-      const grid = document.getElementById('proximas-grid');
-      const casas = JSON.parse(localStorage.getItem('proximasCasas') || '[]');
+    const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+  </script>
 
-      if (casas.length === 0) {
+  <!-- CÓDIGO PRINCIPAL -->
+  <script>
+    async function cargarContacto() {
+      const { data, error } = await supabaseClient
+        .from("contact_info")
+        .select("*")
+        .eq("id", 1)
+        .single();
+
+      if (error) {
+        console.error("Error cargando contacto:", error);
+        return;
+      }
+
+      document.getElementById("contact-address").textContent = data.address;
+      document.getElementById("contact-phone").textContent = data.phone;
+      document.getElementById("contact-phone").href = "tel:" + data.phone.replace(/\D/g, "");
+      document.getElementById("contact-email").textContent = data.email;
+      document.getElementById("contact-hours").textContent = data.schedule;
+    }
+
+    async function cargarTextosInstitucionales() {
+      const { data, error } = await supabaseClient
+        .from("institutional_texts")
+        .select("*")
+        .eq("id", 1)
+        .single();
+
+      if (error) {
+        console.error("Error cargando textos:", error);
+        return;
+      }
+
+      document.getElementById("about-text").textContent = data.about_open_house;
+      document.getElementById("director-name").textContent = data.director_name;
+      document.getElementById("director-title").textContent = data.director_title;
+      document.getElementById("director-message").textContent = data.director_message;
+      document.getElementById("director-signature").textContent = data.director_name;
+    }
+
+    async function cargarProximasCasas() {
+      const grid = document.getElementById("proximas-grid");
+
+      const { data, error } = await supabaseClient
+        .from("open_house_dates")
+        .select("*")
+        .eq("is_active", true)
+        .order("event_date", { ascending: true });
+
+      if (error) {
+        console.error("Error cargando fechas:", error);
+        grid.innerHTML = '<p class="text-center text-white">Error cargando fechas.</p>';
+        return;
+      }
+
+      if (!data || data.length === 0) {
         grid.innerHTML = '<p class="text-center text-white">No hay fechas programadas. ¡Vuelve pronto!</p>';
         return;
       }
 
-      grid.innerHTML = '';
-      casas.forEach(function(casa) {
-        const div = document.createElement('div');
-        div.className = 'casa-fecha';
+      grid.innerHTML = "";
+
+      data.forEach(function(casa) {
+        const div = document.createElement("div");
+        div.className = "casa-fecha";
+
         div.innerHTML = `
-          <div class="fecha">${casa.fecha}</div>
-          <div class="titulo">${casa.titulo}</div>
-          <div class="ubicacion">${casa.ubicacion}</div>
+          <div class="fecha">${casa.event_date}</div>
+          <div class="titulo">${casa.title}</div>
+          <div class="ubicacion">${casa.event_time || ""}</div>
+          <p>${casa.description || ""}</p>
           <a href="#contacto" class="btn-inscribirse">Más información</a>
         `;
+
         grid.appendChild(div);
       });
     }
 
-    // Cargar información de contacto y textos desde localStorage
-    document.addEventListener('DOMContentLoaded', function() {
-      loadProximasCasas();
+    async function cargarGaleria() {
+      const carouselInner = document.getElementById("carousel-inner");
+      const indicators = document.getElementById("carousel-indicators");
 
-      const contactData = {
-        address: localStorage.getItem('contactAddress') || 'Carretera 156 salida hacia Comerío, Barranquitas, P. R.',
-        phone: localStorage.getItem('contactPhone') || '+1 787-857-2897',
-        email: localStorage.getItem('contactEmail') || 'de58390@miescuela.pr',
-        hours: localStorage.getItem('contactHours') || 'Lunes - Viernes: 7:30 AM - 2:30 PM'
-      };
+      const { data, error } = await supabaseClient
+        .from("gallery_images")
+        .select("*")
+        .eq("is_visible", true)
+        .order("created_at", { ascending: false });
 
-      document.getElementById('contact-address').textContent = contactData.address;
-      document.getElementById('contact-phone').textContent = contactData.phone;
-      document.getElementById('contact-phone').href = 'tel:' + contactData.phone.replace(/\D/g, '');
-      document.getElementById('contact-email').textContent = contactData.email;
-      document.getElementById('contact-hours').textContent = contactData.hours;
+      if (error) {
+        console.error("Error cargando galería:", error);
+        return;
+      }
 
-      // Cargar textos institucionales
-      const aboutText = localStorage.getItem('aboutText') || 'La Casa Abierta de la Escuela Superior Ocupacional Pablo Colón Berdecia es una experiencia única diseñada para mostrar la excelencia académica y las oportunidades que ofrece nuestra institución. Durante este evento, estudiantes, familias y la comunidad podrán conocer de cerca nuestros programas ocupacionales, talleres prácticos y proyectos innovadores que preparan a los jóvenes para el mundo laboral y universitario.\n\nAdemás, se presentarán las instalaciones, recursos tecnológicos y actividades extracurriculares que fomentan el desarrollo integral del estudiante. Es la ocasión perfecta para descubrir cómo nuestra escuela impulsa el talento y la formación profesional en un ambiente dinámico y colaborativo.\n\n"Descubre tu futuro hoy: ¡Ven a nuestra Casa Abierta!"';
-      const directorName = localStorage.getItem('directorName') || 'Israel López Rivera';
-      const directorTitle = localStorage.getItem('directorTitle') || 'Director Escolar';
-      const directorMessage = localStorage.getItem('directorMessage') || '"Bienvenidos a la Escuela Superior Vocacional Pablo Colón Berdecia. Nuestra misión es formar jóvenes capacitados con las destrezas técnicas y valores necesarios para triunfar en el mundo laboral y continuar su desarrollo profesional. En nuestra escuela, cada estudiante encuentra un espacio para crecer, aprender y alcanzar sus sueños. ¡Los esperamos con las puertas abiertas!"';
+      if (!data || data.length === 0) {
+        return;
+      }
 
-      const aboutElement = document.getElementById('about-text');
-      if (aboutElement) aboutElement.textContent = aboutText;
+      carouselInner.innerHTML = "";
+      indicators.innerHTML = "";
 
-      const directorNameElement = document.getElementById('director-name');
-      if (directorNameElement) directorNameElement.textContent = directorName;
+      data.forEach(function(img, index) {
+        const indicator = document.createElement("button");
+        indicator.type = "button";
+        indicator.setAttribute("data-bs-target", "#galleryCarousel");
+        indicator.setAttribute("data-bs-slide-to", index);
 
-      const directorTitleElement = document.getElementById('director-title');
-      if (directorTitleElement) directorTitleElement.textContent = directorTitle;
+        if (index === 0) {
+          indicator.classList.add("active");
+        }
 
-      const directorElement = document.getElementById('director-message');
-      if (directorElement) directorElement.textContent = directorMessage;
+        indicators.appendChild(indicator);
+
+        const item = document.createElement("div");
+        item.className = index === 0 ? "carousel-item active" : "carousel-item";
+
+        item.innerHTML = `
+          <img src="${img.image_url}" class="d-block w-100 img-centered" alt="${img.title || 'Imagen Casa Abierta'}">
+          <div class="carousel-caption">
+            <h5>${img.title || 'Casa Abierta PCB'}</h5>
+            <p>${img.section || ''}</p>
+          </div>
+        `;
+
+        carouselInner.appendChild(item);
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", async function() {
+      await cargarContacto();
+      await cargarTextosInstitucionales();
+      await cargarProximasCasas();
+      await cargarGaleria();
     });
 
-    // Inicializar EmailJS con tu Public Key
-    // SECURITY WARNING: API key exposed in client-side code. Consider moving to server-side.
-    (function() {
-      emailjs.init("mDtiMAcklOZwMjVPL"); // Reemplaza con tu Public Key de EmailJS
-    })();
+    emailjs.init("mDtiMAcklOZwMjVPL");
 
-    // Manejar el envío del formulario
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
       event.preventDefault();
 
-      const submitBtn = document.getElementById('submit-btn');
-      const formStatus = document.getElementById('form-status');
+      const submitBtn = document.getElementById("submit-btn");
+      const formStatus = document.getElementById("form-status");
 
-      // Deshabilitar botón mientras envía
       submitBtn.disabled = true;
-      submitBtn.textContent = 'Enviando...';
-      formStatus.style.display = 'block';
+      submitBtn.textContent = "Enviando...";
+      formStatus.style.display = "block";
       formStatus.innerHTML = '<span style="color: #ffc107;">Enviando mensaje...</span>';
 
-      // Parámetros del email
       const templateParams = {
-        to_email: 'computec.pcb@gmail.com',
-        from_name: document.getElementById('nombre').value,
-        from_email: document.getElementById('email').value,
-        telefono: document.getElementById('telefono').value,
-        message: document.getElementById('mensaje').value
+        to_email: "computec.pcb@gmail.com",
+        from_name: document.getElementById("nombre").value,
+        from_email: document.getElementById("email").value,
+        telefono: document.getElementById("telefono").value,
+        message: document.getElementById("mensaje").value
       };
 
-      // Enviar email usando EmailJS
-      // Reemplaza 'YOUR_SERVICE_ID' y 'YOUR_TEMPLATE_ID' con tus IDs de EmailJS
-      emailjs.send('service_aqtuyls', 'template_7p2gs13', templateParams)
-        .then(function(response) {
+      emailjs.send("service_aqtuyls", "template_7p2gs13", templateParams)
+        .then(function() {
           formStatus.innerHTML = '<span style="color: #28a745;">¡Mensaje enviado exitosamente! Nos pondremos en contacto pronto.</span>';
-          document.getElementById('contact-form').reset();
+          document.getElementById("contact-form").reset();
           submitBtn.disabled = false;
-          submitBtn.textContent = 'Enviar Mensaje';
-        }, function(error) {
-          formStatus.innerHTML = '<span style="color: #dc3545;">Error al enviar el mensaje. Por favor, intenta de nuevo.</span>';
+          submitBtn.textContent = "Enviar Mensaje";
+        })
+        .catch(function(error) {
+          console.error("Error EmailJS:", error);
+          formStatus.innerHTML = '<span style="color: #dc3545;">Error al enviar el mensaje. Intenta de nuevo.</span>';
           submitBtn.disabled = false;
-          submitBtn.textContent = 'Enviar Mensaje';
+          submitBtn.textContent = "Enviar Mensaje";
         });
     });
   </script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
